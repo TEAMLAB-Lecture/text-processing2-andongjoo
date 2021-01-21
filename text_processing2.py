@@ -69,10 +69,11 @@ def to_camel_case(underscore_str):
         return underscore_str
     
     for i,c in enumerate(underscore_str):
-        if i!=0:
-            if c!='_' and underscore_str[i-1]=="_":
+        if c!='_':
+            if i!=0 and underscore_str[i-1]=="_":
                 camelcase_str+=c.upper()
             else:
+                
                 camelcase_str+=c.lower()
                 
     
